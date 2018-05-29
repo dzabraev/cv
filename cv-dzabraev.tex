@@ -1,0 +1,166 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wilson Resume/CV
+% XeLaTeX Template
+% Version 1.0 (22/1/2015)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Howard Wilson (https://github.com/watsonbox/cv_template_2004) with
+% extensive modifications by Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Default font size
+
+\input{structure.tex} % Include the file specifying document layout
+
+\usepackage{graphicx}
+\graphicspath{ {./} }
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Maksim Dzabraev -- Résumé} % Print the main header
+
+%------------------------------------------------
+
+\parbox{0.5\textwidth}{ % First block
+\begin{tabbing} % Enables tabbing
+\hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
+{\bf Address} \> B1656left, 1, Leninskie gori,\\ % Address line 1
+\> Moscow, Russia, 119991 \\ % Address line 2
+{\bf Date of Birth} \> 19$^{th}$ February 1993 \\ % Date of birth 
+{\bf Nationality} \> Russian \\ % Nationality
+{\bf Mobile Phone} \> +7 926 733 5139 \\ % Mobile phone
+{\bf Email} \> \href{mailto:dzabraew@gmail.com}{dzabraew@gmail.com} \\ % Email address
+{\bf Github} \> \href{https://github.com/dzabraev}{github.com/dzabraev} \\ % Mobile phone
+\end{tabbing}}
+\hfill % Horizontal space between the two blocks
+\parbox{0.5\textwidth}{ % Second block
+\begin{tabbing} % Enables tabbing
+\hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
+\
+\includegraphics[scale=0.12]{photo}
+\end{tabbing}}
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\tabbedblock{
+\bf{2011-2017} \> Specialist in Mathematics - \href{http://www.msu.ru/en}{Lomonosov Moscow State University} \\[5pt]
+\>\+
+\textit{Faculty of Mechanics and Mathematics, Department of Computational Mathematics}
+}
+
+\tabbedblock{
+\bf{2017-Present} \>PhD student - \href{http://www.msu.ru/en}{Lomonosov Moscow State University} \\[5pt]
+\>\+
+\textit{Faculty of Mechanics and Mathematics, Department of Computational Mathematics}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	EMPLOYMENT HISTORY SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Employment History}
+\job
+{Apr 2013 -}{Present}
+{NIISI RAS, Moscow, Russia}
+{https://www.niisi.ru/}
+{Developer, engineer}
+{
+
+\begin{itemize-noindent}
+\item{Maintaining and developing RTOS Debugger and RTOS debugging agent.}
+\item{Developed pseudo GUI front-end for debugger based on midnight commander}
+\item{Developed CI testing for debugeer}
+\end{itemize-noindent}
+
+\rule{0mm}{5mm}\textbf{Technologies:} RTOS, MIPS, C, Python, GDB, GDB remote-protocol, CPU Simulation, Vmips}
+
+%------------------------------------------------
+
+\job
+{Sep 2016 -}{Present}
+{IAS Istina, Moscow, Russia}
+{https://istina.msu.ru/}
+{Front-end/backend developer}
+{
+\begin{itemize-noindent}
+\item{Maintaining/developing Equipment, Smi subsystems}
+\item{Ported whole system from Django-select2 ver 4.x to ver 5.x}
+\item{Developed common interface for attaching scientific results (articles, books, dissertations, ... ) to arbitrary object (for. example scientific equipment).}
+\item{Replace some front-end components with common JS libraries like jsgrid, fancytree, select2.}
+\item{Developed Firefox-based crawler for news article extraction (with javascript execution).}
+\item{Integrated some CI components: comparing code/template coverage with git diff.}
+\item{Rewrote NIX-expressions for setting up development environment.}
+\end{itemize-noindent}
+
+
+\rule{0mm}{5mm}\textbf{Technologies:} HTML, CSS, Javascript, Python, Django, NIX package manager/NIXOS, Oracle, Postgerql, Selenium}
+
+%----------------------------------------------------------------------------------------
+%	IT/COMPUTING SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Software Engineering Skills}
+
+\skillgroup{Programming Languages}
+{
+\textit{Python}\\
+\textit{C/C++}\\
+\textit{Bash}\\
+\textit{Nix expression language}
+}
+
+%------------------------------------------------
+
+\skillgroup{Web Development}
+{
+\textit{HTML, CSS, JavaScript/jQuery}\\
+\textit{Django}\\
+}
+
+%------------------------------------------------
+
+\skillgroup{Miscellaneous}
+{
+\textit{SQL, Oracle, PostgreSQL, Sqlite}\\
+\textit{Linux}\\
+\textit{git, redmine, sentry}\\
+\textit{gdb, valgrind, gprof}
+}
+
+\section{Contribution to Open Source}
+
+\subsection{merged}
+\href{https://github.com/bminor/binutils-gdb/commit/484d8d361de65a8489252d14511b77c142d859a1}{GDB, Python binding, patch}\\
+\href{http://midnight-commander.org/ticket/3870?cversion=0&cnum_hist=1}{midnight commander, fix bug in quick widget}\\
+\href{https://github.com/mesonbuild/meson/pull/2976}{Mesonbuild, include\_directories fix order, patch}\\
+\href{https://github.com/NixOS/nixpkgs/pull/33715}{Nixpkgs, nixification for diff\_cover, pydocstyle, jinja2\_pluralize}\\
+\href{https://github.com/orivej/pybfd/commit/f5ed88590c66a3570b7e5b9aa4c723c40686271d}{pybfd, fix python binding (bfd\_my\_archive(abfd) had been removed)}\\
+\href{https://github.com/dzabraev/CUDA-grep/commit/79f4fddfab3cc7950cbe6c9b3a54bcb2b87dc3cc}{CUDAGrep, cudagrep hadn't worked on cuda5 before this fix}
+
+\subsection{currently not merged}
+
+\href{https://sourceware.org/ml/gdb-patches/2018-01/msg00415.html}{GDB, gdb gets segfault when working with gcc7 produced debug info, patch}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
