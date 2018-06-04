@@ -40,10 +40,10 @@
 \parbox{0.5\textwidth}{ % First block
 \begin{tabbing} % Enables tabbing
 \hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
-{\bf Address} \> B1656left, 1, Leninskie gori,\\ % Address line 1
-\> Moscow, Russia, 119991 \\ % Address line 2
+{\bf Address} \> B1656left, 1, Leninskie Gory,\\ % Address line 1
+\> Moscow, Russia \\ % Address line 2
 {\bf Date of Birth} \> 19$^{th}$ February 1993 \\ % Date of birth 
-{\bf Nationality} \> Russian \\ % Nationality
+{\bf Languages} \> Russian (Native), English (technical)\\ % Nationality
 {\bf Mobile Phone} \> +7 926 733 5139 \\ % Mobile phone
 {\bf Email} \> \href{mailto:dzabraew@gmail.com}{dzabraew@gmail.com} \\ % Email address
 {\bf Github} \> \href{https://github.com/dzabraev}{github.com/dzabraev} \\ % Mobile phone
@@ -61,16 +61,28 @@
 \section{Education}
 
 \tabbedblock{
-\bf{2011-2017} \> Specialist in Mathematics - \href{http://www.msu.ru/en}{Lomonosov Moscow State University} \\[5pt]
+\bf{2017-Present} \>PhD student - \href{http://www.msu.ru/en}{Lomonosov Moscow State University} \\[5pt]
 \>\+
 \textit{Faculty of Mechanics and Mathematics, Department of Computational Mathematics}
 }
 
 \tabbedblock{
-\bf{2017-Present} \>PhD student - \href{http://www.msu.ru/en}{Lomonosov Moscow State University} \\[5pt]
+\bf{2011-2017} \> Specialist in Mathematics - \href{http://www.msu.ru/en}{Lomonosov Moscow State University} \\[5pt]
 \>\+
 \textit{Faculty of Mechanics and Mathematics, Department of Computational Mathematics}
 }
+
+% \section{Diploma}
+%
+% There were two problems I investigated in my \href{https://github.com/dzabraev/diploma/blob/master/paper/diploma.pdf}{thesis}.
+% The first problem was to extract names of science seminars from texts written in arbitrary language. I proposed an approach to solve it with neural networks.
+% The second problem was to make a sentiment classifier for articles from mass media. I used SVM and applied it to estimate MSU reputation.
+
+\section{Listened courses}
+\begin{itemize-noindent}
+\item{Mazurenko I.L., Mathematical foundations of signal processing}
+\item{\href{https://www.coursera.org/specializations/machine-learning-data-analysis}{Introduction to machine learning}}
+\end{itemize-noindent}
 
 
 %----------------------------------------------------------------------------------------
@@ -85,10 +97,31 @@
 {Developer, engineer}
 {
 
+%Обязаности
+%* Поддержка и реализация новых возможностей в отладчике для ОСРВ.
+%* Своевременное портирование отладчика для ОСРВ на самую новую версию GDB.
+%* Поддержка и реализация новых возможностей в агенте отладки, который находится в рамках ОСРВ.
+%* Общение с разработчиками ОСРВ и пользователями отладчика на предмет 
+
+%Accomplishments
+%* К настоящему моменту сделано, что отладчик ОСРВ базируется на версии gdb 8.1.
+%* Реализована CI-система тестов отладчика.
+%* Реализован вспомогательный tui-интерфейс для отладчика. Просмотр исходного
+%кода, просмотр/изменение регистров, локальных переменных, просмотр и переключение
+%потоков и фреймов.
+
 \begin{itemize-noindent}
-\item{Maintaining and developing RTOS Debugger and RTOS debugging agent.}
-\item{Developed pseudo GUI front-end for debugger based on midnight commander}
-\item{Developed CI testing for debugeer}
+\subsection{Responsibilities}
+\item{Maintaining and developing new features for RTOS Debugger (Debugger is based on GNU gdb).}
+\item{Keeping RTOS debugger up-to-date with the latest gdb version.}
+\item{Maintaining and developing new features for debugger stub (stub is the part of RTOS Baget, handles requests from debugger).}
+\item{Building rpm package for each new RTOS Debugger release.}
+
+\subsection{Accomplishments}
+\item{RTOS Debugger was ported to gdb 8.1.}
+\item{Configured Gitlab CI to run tests on vmips and some real hardware. The solution is based on GNU Dejagnu.}
+\item{Implemented \href{https://github.com/dzabraev/mcgdb}{tui} for RTOS Debugger.}
+\item{Contributed to the development of vmips gdb stub. Vmips gdb stub allows debug RTOS at CPU level.}
 \end{itemize-noindent}
 
 \rule{0mm}{5mm}\textbf{Technologies:} RTOS, MIPS, C, Python, GDB, GDB remote-protocol, CPU Simulation, Vmips}
@@ -99,20 +132,55 @@
 {Sep 2016 -}{Present}
 {IAS Istina, Moscow, Russia}
 {https://istina.msu.ru/}
-{Front-end/backend developer}
+{Front-end/backend-end developer}
 {
+
+% Обязаности.
+% * В ИАС ИСТИНА существуют подсистема учета научной деятельности относительно научного оборудования.
+%       Я должен заниматься поддержкой данной подсистемой и разработкой нового функционала.
+% * В ИАС ИСТИНА существует подсистема учета выступлений научных сотрудников в СМИ.
+%       Я должен исправлять ошибки в этой подсистеме.
+% * Добавление новых возможностей и исправление ошибок в любой подсистеме, по требованию
+%       руководства.
+% * Участие в обсуждениях приоритетных путей развития системы.
+%
+% Достижения.
+% * Реализован интерфейс (activity-block) представляющий следующий спектр возможностей:
+%       * Прикреплять научные результаты к объектам системы. Например, прикрепление статьи к прибору.
+%       * При помощи данного интерфейса ответственный может подтвердить или отклонить прикрепленный результат.
+%       * Поиск по прикрепленным резульатам.
+%   Сейчас этот интерфейс используется в нескольких подсистемах ИАС ИСТИНА.
+% * Был осуществлен перенос модуля с django-select2 с версии 4.x на 5.х. Эти версии имеют разное API,
+%       в связи с этим потребовалось переписать большое количество кода.
+% * Были реализованы selenium-тесты для activity-block и автоматические тесты для подсистемы оборудования.
+% * Принимал участие в разработки CI системы тестирования.
+% * Разработан crawler на основе Firefox и реализован алгоритм, который позволяет заходить
+%       во всевозможные места на произвольной веб-странице и извлекать необходимые данные.
+% * Разработка анализатора публикаций в СМИ на предмет ухудшение/улучшения репутации МГУ.
+
+
 \begin{itemize-noindent}
-\item{Maintaining/developing Equipment, Smi subsystems}
-\item{Ported whole system from Django-select2 ver 4.x to ver 5.x}
-\item{Developed common interface for attaching scientific results (articles, books, dissertations, ... ) to arbitrary object (for. example scientific equipment).}
-\item{Replace some front-end components with common JS libraries like jsgrid, fancytree, select2.}
-\item{Developed Firefox-based crawler for news article extraction (with javascript execution).}
-\item{Integrated some CI components: comparing code/template coverage with git diff.}
-\item{Rewrote NIX-expressions for setting up development environment.}
+\subsection{Responsibilities}
+\item{maintaining and improving functionality of scientific activity monitoring system}
+
+\subsection{Achievements}
+\item{Developed functional tests of complex user interface with selenium.}
+\item{Ported legacy code from 4.x to 5.x version of django-select2.}
+\item{Configured CI for the project.}
+\item{Introduced new development environment, based on \href{https://nixos.org/nix/}{NIX} package manager.}
+\item{Developed universal web crawler for retrieving texts from arbitrary mass media web-sites.}
+%\item{Developed crawler based on Firefox (javascript execution) and algorithm allows traverse arbitrary web-page.
+%Several millions articles was extracted by crawler from mess media web-sites.}
+\item{Implemented sentiment analysis system revealing MSU reputation according to the news feed.}
+%\item{Developed sentiment analyzer for classification articles about Lomonosov MSU.
+%Analyzer predicts one of three labels +,-,0. Where + means that article increases
+%reputation of MSU, - descrease, and zero means not affecting to reputation.}
 \end{itemize-noindent}
 
+\rule{0mm}{5mm}\textbf{Technologies:} HTML, CSS, Javascript, Python, Django, NIX package manager/NIXOS, Oracle, PostgreSQL, Selenium}
 
-\rule{0mm}{5mm}\textbf{Technologies:} HTML, CSS, Javascript, Python, Django, NIX package manager/NIXOS, Oracle, Postgerql, Selenium}
+
+
 
 %----------------------------------------------------------------------------------------
 %	IT/COMPUTING SKILLS SECTION
@@ -130,35 +198,31 @@
 
 %------------------------------------------------
 
-\skillgroup{Web Development}
-{
-\textit{HTML, CSS, JavaScript/jQuery}\\
-\textit{Django}\\
-}
-
 %------------------------------------------------
 
-\skillgroup{Miscellaneous}
+\skillgroup{Technologies}
 {
-\textit{SQL, Oracle, PostgreSQL, Sqlite}\\
 \textit{Linux}\\
+\textit{scikit-learn, pandas, numpy, keras}
 \textit{git, redmine, sentry}\\
-\textit{gdb, valgrind, gprof}
+\textit{gdb, valgrind, gprof}\\
+\textit{SQL, Oracle, PostgreSQL, Sqlite}\\
+\textit{Django, HTML, CSS, JavaScript/jQuery}
 }
 
 \section{Contribution to Open Source}
 
 \subsection{merged}
-\href{https://github.com/bminor/binutils-gdb/commit/484d8d361de65a8489252d14511b77c142d859a1}{GDB, Python binding, patch}\\
-\href{http://midnight-commander.org/ticket/3870?cversion=0&cnum_hist=1}{midnight commander, fix bug in quick widget}\\
-\href{https://github.com/mesonbuild/meson/pull/2976}{Mesonbuild, include\_directories fix order, patch}\\
-\href{https://github.com/NixOS/nixpkgs/pull/33715}{Nixpkgs, nixification for diff\_cover, pydocstyle, jinja2\_pluralize}\\
-\href{https://github.com/orivej/pybfd/commit/f5ed88590c66a3570b7e5b9aa4c723c40686271d}{pybfd, fix python binding (bfd\_my\_archive(abfd) had been removed)}\\
-\href{https://github.com/dzabraev/CUDA-grep/commit/79f4fddfab3cc7950cbe6c9b3a54bcb2b87dc3cc}{CUDAGrep, cudagrep hadn't worked on cuda5 before this fix}
+\href{https://github.com/bminor/binutils-gdb/commit/484d8d361de65a8489252d14511b77c142d859a1}{GDB, Made gdb.selected\_thread().inferior return a new reference}\\
+\href{http://midnight-commander.org/ticket/3870?cversion=0&cnum_hist=1}{midnight commander, fixed incorrect variable usage in quick widget}\\
+\href{https://github.com/mesonbuild/meson/pull/2976}{Mesonbuild, include\_directories fixed order}\\
+\href{https://github.com/NixOS/nixpkgs/pull/33715}{Nixpkgs, did nixification for diff\_cover, pydocstyle, jinja2\_pluralize}\\
+\href{https://github.com/orivej/pybfd/commit/f5ed88590c66a3570b7e5b9aa4c723c40686271d}{pybfd, fixed python binding (bfd\_my\_archive(abfd) was removed)}\\
+\href{https://github.com/dzabraev/CUDA-grep/commit/79f4fddfab3cc7950cbe6c9b3a54bcb2b87dc3cc}{CUDAGrep, made cudagrep work on cuda5}
 
-\subsection{currently not merged}
+\subsection{submitted}
 
-\href{https://sourceware.org/ml/gdb-patches/2018-01/msg00415.html}{GDB, gdb gets segfault when working with gcc7 produced debug info, patch}
+\href{https://sourceware.org/ml/gdb-patches/2018-01/msg00415.html}{GDB, fixed segfault error when running gdb on gcc7 produced debug info}
 
 
 %----------------------------------------------------------------------------------------
